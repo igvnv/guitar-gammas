@@ -1,0 +1,37 @@
+.gammas-list-item {
+  display: grid;
+  grid-gap: 14px;
+  grid-template-areas: 'label actions';
+  grid-template-columns: 1fr max-content;
+}
+
+.gammas-list-item__label {
+  grid-area: label;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.gammas-list-item__actions {
+  display: grid;
+  grid-area: actions;
+  grid-auto-flow: column;
+  grid-gap: 14px;
+}
+
+.gammas-list-item__action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  outline: none;
+  width: 20px;
+}
+
+.gammas-list-item__action-button_edit {
+  background-image: url(../../images/icon-edit.svg);
+}
+
+.gammas-list-item__action-button_delete {
+  background-image: url(../../images/icon-delete.svg);
+}

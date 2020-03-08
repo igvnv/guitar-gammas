@@ -1,0 +1,20 @@
+.gammas-list__empty-list-message {
+  color: $color-gray;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gammas-list__item {
+  border-top: 1px solid $color-light-gray;
+  list-style: none;
+  margin: 0;
+  padding: 24px 12px;
+
+  &:first-child {
+    border-top: none;
+  }
+}

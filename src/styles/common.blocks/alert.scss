@@ -1,0 +1,45 @@
+.alert {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  left: 50%;
+  min-width: 400px;
+  padding: 67px 32px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alert__message {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+  margin: 0;
+  text-align: center;
+}
+
+.alert__buttons-list {
+  display: grid;
+  grid-gap: 13px;
+  padding-top: 36px;
+}
+
+.alert__button {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+  height: 32px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.alert__button_main {
+  border: 1px solid $color-light-gray;
+  font-weight: bold;
+  height: 50px;
+  line-height: 48px;
+}

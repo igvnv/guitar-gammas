@@ -1,0 +1,11 @@
+.page-container {
+  display: block;
+  min-height: 100vh;
+}
+
+.page-container_centred {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+}
