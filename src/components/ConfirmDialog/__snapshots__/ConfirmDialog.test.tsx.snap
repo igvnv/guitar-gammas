@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmDialog displays message 1`] = `
+<div>
+  <div
+    class="popup-background"
+    style="animation-duration: 400ms;"
+  />
+  <div
+    class="alert"
+    style="animation-duration: 400ms;"
+  >
+    <p
+      class="alert__message"
+    >
+      Confirm message
+    </p>
+    <div
+      class="alert__buttons-list"
+    >
+      <button
+        class="alert__button alert__button_main"
+        data-testid="no-button"
+        type="button"
+      >
+        Нет
+      </button>
+      <button
+        class="alert__button"
+        data-testid="yes-button"
+        type="button"
+      >
+        Да
+      </button>
+    </div>
+  </div>
+</div>
+`;

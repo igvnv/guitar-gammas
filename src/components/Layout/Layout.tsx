@@ -1,31 +1,20 @@
 import React, { useState } from 'react';
 
+import ConfirmDialog from 'components/ConfirmDialog';
+
 const Layout: React.FC = () => {
   const [displayDeleteAlert, setDisplayDeleteAlert] = useState<boolean>(false);
 
   return (
     <>
       {displayDeleteAlert && (
-        <div className="alert">
-          <p className="alert__message">Удалить гамму?</p>
-
-          <div className="alert__buttons-list">
-            <button
-              type="button"
-              className="alert__button alert__button_main"
-              onClick={() => setDisplayDeleteAlert(false)}
-            >
-              Не удалять
-            </button>
-            <button
-              type="button"
-              className="alert__button"
-              onClick={() => setDisplayDeleteAlert(false)}
-            >
-              Удалить
-            </button>
-          </div>
-        </div>
+        <ConfirmDialog
+          message="Удалить гамму?"
+          yesButton="Удалить"
+          noButton="Не удалять"
+          onConfirm={() => setDisplayDeleteAlert(false)}
+          onCancel={() => setDisplayDeleteAlert(false)}
+        />
       )}
 
       <div className="page-container page-container_centred">

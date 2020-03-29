@@ -1,4 +1,6 @@
 .alert {
+  animation-name: alert_opening;
+  animation-timing-function: ease-out;
   background: #ffffff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   left: 50%;
@@ -7,6 +9,12 @@
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 51;
+}
+
+.alert_closing {
+  animation-name: alert_closing;
+  animation-timing-function: ease-in;
 }
 
 .alert__message {
@@ -42,4 +50,26 @@
   font-weight: bold;
   height: 50px;
   line-height: 48px;
+}
+
+@keyframes alert_opening {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+@keyframes alert_closing {
+  from {
+    opacity: 1;
+    top: 50%;
+  }
+  to {
+    opacity: 0;
+    top: 0;
+  }
 }
