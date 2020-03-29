@@ -1,0 +1,32 @@
+const notes: ReadonlyArray<string> = [
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  'A',
+  'A#',
+  'B',
+  'C',
+  'C#',
+  'D',
+  'D#',
+  'E',
+  'F',
+  'F#',
+  'G',
+  'G#',
+  'p',
+  'h',
+  '~',
+  '↑',
+  '↓',
+  '*'
+] as const;
+
+export default notes;
