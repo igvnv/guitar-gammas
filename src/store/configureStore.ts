@@ -1,21 +1,15 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 
 import rootReducer from './reducer';
+import rootSaga from './sagas';
 
-const configureStore = (defaultState: any = undefined) => {
-  if (defaultState === undefined && localStorage.getItem('store') !== null) {
-    try {
-      defaultState = JSON.parse(localStorage.getItem('store')!);
-    } catch (e) {
-      console.error("Can't read store from local storage");
-    }
-  }
+const configureStore = () => {
+  const sagaMiddleware = createSagaMiddleware();
 
-  const store = createStore(rootReducer, defaultState);
+  const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
-  store.subscribe(() => {
-    localStorage.setItem('store', JSON.stringify(store.getState()));
-  });
+  sagaMiddleware.run(rootSaga);
 
   return store;
 };

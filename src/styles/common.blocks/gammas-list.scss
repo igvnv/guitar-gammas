@@ -1,3 +1,8 @@
+.gammas-list {
+  margin: 0;
+  padding: 0;
+}
+
 .gammas-list__empty-list-message {
   color: $color-gray;
   display: block;
@@ -17,4 +22,8 @@
   &:first-child {
     border-top: none;
   }
+}
+
+.gammas-list-item__label {
+  cursor: pointer;
 }
